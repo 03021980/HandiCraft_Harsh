@@ -1,0 +1,91 @@
+{% load static %}
+<html>
+    <head>
+        <title>Product Details</title>
+        <style>
+            body{
+                background-color: rgb(247, 246, 244);
+                font-family: inherit;
+                font-style: italic;
+                font-size: 18px;
+                color: rgb(59, 59, 56);
+            }
+            h3{
+                font-family: inherit;
+                font-style: italic;
+                font-size: 22px;
+            }
+            table{
+                border : 2px dashed rgb(59, 59, 56);
+                border-collapse: collapse;
+            }
+            td {
+                height: 50px;
+                padding: 2px;
+            }
+            .td1{
+                border: 1px solid black;
+                color: rgb(10, 10, 10);
+                padding: 2px;
+            }
+            a{
+                color: black;
+                font-family: inherit;
+                font-style: italic;
+                font-size: 33px;
+            }
+
+            input{
+                background-color: rgb(247, 243, 238);
+                font-family: inherit;
+                font-style: italic;
+                font-size: 22px;
+                border-radius: 5px;
+                line-height: 40px;
+                text-align: center;        
+            }
+            .btn{
+                width: 100%;
+                border-radius: 4px;
+                cursor: pointer;
+                background-color: rgb(205, 231, 231);
+            }
+            .top-left {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="top-left">
+        <form method="POST" action="/Pdetails/">
+            {% csrf_token %}
+            <h1>Submit details</h1>
+        <table>
+            <tr>
+                <td class="td1"><h3>Product Name:- <input type="text" name="pname" placeholder="Product Name" required></h3></th>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Product Quantity:- <input type="number" name="pquantity" placeholder="Quantity" required></h3></td>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Customer Name:- <input type="text" name="cname" placeholder="Customer Name" required></h3></th>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Customer Address:- <input type="text" name="caddress" placeholder="Customer Address" required></h3></th>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Customer Phone Number:- <input type="text" name="cphnum" placeholder="Customer Phone Number" required></h3></td>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Customer Email Id:- <input type="text" name="cemail" placeholder="Customer Email Id" required></h3></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="td1"><input type="submit" value="Place Order" class="btn"></td>
+            </tr>
+        </table>
+        </form> 
+        </div>
+    </body>
+</html>

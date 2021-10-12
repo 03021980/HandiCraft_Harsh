@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        .producttd2{
+            border:2px dotted rgb(3, 3, 3);
+        }
+        h1{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 40px;
+            text-align: center;
+            color: brown;
+        }
+        input[type=text]{
+            width: 360px;
+            height: 25px;
+            border-radius: 2px;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+        }
+        .imagetd1{
+            padding-left: 50px;
+        }
+        .td2{
+            padding-left: 200px;
+        }
+        .td3{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 30px;
+        }
+        .ltd3{
+            padding-left: 70px;
+        }
+        .ltd4{
+            padding-right: 20px;
+        }
+       
+        .navbar {
+            padding: 5px;
+            overflow: hidden;
+            background-color: rgb(114, 116, 111);
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(153, 102, 102);
+        }
+
+        .wallhang{
+            border:2px dotted rgb(3, 3, 3); 
+            border-collapse: collapse; 
+            border-style:dotted solid; 
+            margin-top:20px; 
+            margin-bottom:20px; 
+            background-color: rgb(220, 220, 228);
+            margin-left: 5px;
+            width: 1340px;
+        }
+
+        .td1{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+            width: 300px;
+        }
+        h3{
+            margin-top: 2px;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 30px;
+            text-align: center;
+            color:rgb(10, 10, 10);
+        }
+        h5{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+            text-align: center;
+            margin-top: -15px;
+        }
+        .btn{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+            width: 180px;
+            height: 40px;
+            margin-top: -15px;
+            margin-left: 60px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            background-color: rgb(27, 189, 27);
+        }
+        .plink{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <table style="background-color: rgb(241, 224, 241); width: 1345px; ">
+        <tr>
+            <td class="imagetd1"><img src="{% static 'handicraftApp/images/logo.jpg' %}" width="150" height="150" ></td>
+            <td class="td2"><input type="text" placeholder="Search.." name="search"></td>
+            <td class="ltd3"><img src="{% static 'handicraftApp/images/wishlist.jpg' %}" width="30" height="30"></td>
+            <td class="ltd4"><a class="pLink" href="/cart/"><img src="{% static 'handicraftApp/images/bag.png' %}" width="30" height="30"></a></td>
+            <td class="td3"><a href="/login/">signout</td></a>
+        </tr>
+    </table>
+    </form>
+    <div class="navbar">
+        <a href="/home/">Home</a>
+        <a href="/hdecor/">HomeDecor</a>
+        <a href="/clothing">Clothing</a>
+        <a href="/footware">Footware</a>
+        <a href="/jewellery">Jewellery</a>
+        <a href="/photoframes/">Photoframes</a>
+        <a href="/handbag/">Handbags</a>
+        <a href="/painting">Painting</a>
+        <a href="/pot/">Pottery</a>
+    </div>
+    <table class="wallhang"> 
+        <h1>Kanjivaram</h1>
+        <tr>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram1.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>Red saree</h3><h5>₹1499</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram2.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>Red saree</h3><h5>₹1289</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram3.jpeg' %}" width="300" height="250"><h3>Kanjivaram <br>Red saree</h3><h5>₹1654</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td ><img src="{% static 'handicraftApp/images/kanjivaram4.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>Purple saree</h3><h5>₹1349</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+        </tr>
+    </table>
+
+    <table class="wallhang"> 
+        <tr>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram5.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>Golden-Black saree</h3><h5>₹1459</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram6.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>pink saree</h3><h5>₹1999</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram7.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>White-Red saree</h3><h5>₹1896</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td ><img src="{% static 'handicraftApp/images/kanjivaram8.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>Yellow saree</h3><h5>₹1994</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            
+        </tr>
+    </table>
+ 
+        <table class="wallhang"> 
+        <tr>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram9.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>Green-Pink saree</h3><h5>₹1259</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram10.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>White-Red saree</h3><h5>₹2379</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/kanjivaram11.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>Cream-Red saree</h3><h5>₹2799</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td ><img src="{% static 'handicraftApp/images/kanjivaram12.jpg' %}" width="300" height="250"><h3>Kanjivaram <br>Multicolor saree</h3><h5>₹2129</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+        </tr>
+    </table>
+
+</body>
+</html>

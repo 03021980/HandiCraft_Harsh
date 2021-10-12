@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>edit</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        input[type=text]{
+            width: 360px;
+            height: 25px;
+            border-radius: 2px;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+        }
+        h3{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+            text-align: center;
+            color: brown;
+        }
+        .imagetd1{
+            padding-left: 50px;
+        }
+        .td2{
+            padding-left: 200px;
+        }
+        .td3{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 30px;
+        }
+        .ltd3{
+            padding-left: 70px;
+        }
+        .ltd4{
+            padding-right: 20px;
+        }
+       
+        .navbar {
+            padding: 5px;
+            overflow: hidden;
+            background-color: rgb(114, 116, 111);
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+        }
+        .td1{
+            border: 1px solid black;
+            color: rgb(42, 6, 78);
+            padding: 2px;
+        }
+        .btn{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+            width: 100%;
+            height: 35px;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: rgb(231, 213, 53);
+        }
+        .navbar a:hover {
+            background-color: rgb(153, 102, 102);
+        }
+        .table1{
+            border-collapse: collapse;
+            margin-top: 55px;
+        }
+        .centered {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <table style="background-color: rgb(241, 224, 241); width: 1345px; ">
+        <tr>
+            <td class="imagetd1"><img src="{% static 'handicraftApp/images/logo.jpg' %}" width="150" height="150" ></td>
+            <td class="td2"><input type="text" placeholder="Search.." name="search"></td>
+            <td class="ltd3"><img src="{% static 'handicraftApp/images/wishlist.jpg' %}" width="30" height="30"></td>
+            <td class="ltd4"><a class="pLink" href="/cart/"><img src="{% static 'handicraftApp/images/bag.png' %}" width="30" height="30"></a></td>
+            <td class="td3"><a href="/login/">signout</td></a>
+        </tr>
+    </table>
+    </form>
+    <div class="navbar">
+        <a href="/home/">Home</a>
+        <a href="/hdecor/">HomeDecor</a>
+        <a href="/clothing">Clothing</a>
+        <a href="/footware">Footware</a>
+        <a href="/jewellery">Jewellery</a>
+        <a href="/photoframes/">Photoframes</a>
+        <a href="/handbag/">Handbags</a>
+        <a href="/painting">Painting</a>
+        <a href="/pot/">Pottery</a>
+    </div>
+
+    <div class="centered">
+    <table class="table1">
+        <form method="Post" action="/updateValues/">
+            {% csrf_token %}
+            <input type="hidden" value={{i.id}} name="id">
+            <tr>
+                <td class="td1"><h3>Product Name</h3></td>
+                <td class="td1"><input type="text" name="PRODName" value={{i.pname}}></td>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Product Quantity</h3></td>
+                <td class="td1"><input type="text" name="PRODquan" value={{i.pquantity}}></td>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Customer Address</h3></td>
+                <td class="td1"><input type="text" name="CUSadd" value={{i.caddress}}></td>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Customer Phone Number</h3></td>
+                <td class="td1"><input type="text" name="CUSphn" value={{i.cphnum}}></td>
+            </tr>
+            <tr>
+                <td class="td1"><h3>Customer Email Id</h3></td>
+                <td class="td1"><input type="text" name="CUSemail" value={{i.cemail}}></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td1"><input type="submit" value="Update & Save" class="btn"></td>
+            </tr>
+        </form>
+    </div>
+    </table>
+
+</body>
+</html>

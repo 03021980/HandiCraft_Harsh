@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>register</title>
+    <style>
+        body{
+            background-color: rgb(19, 153, 153);
+            font-family: inherit;
+            font-style: italic;
+            font-size: 22px;
+           
+        }
+        td {
+            height: 50px;
+            padding: 5px;
+        }
+    
+        a{
+            color: black;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 33px;
+        }
+
+        input{
+            background-color: wheat;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 22px;
+            border-radius: 5px;
+            line-height: 40px;
+            text-align: center;
+            
+        }
+        .btn{
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: rgb(46, 179, 184);
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            color: cornsilk;
+        }
+        
+        .centered {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+             transform: translate(-50%, -50%);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'handicraftApp/images/r1.jpg' %}" width="1350" height="603" >
+        <div class="centered">
+            <h1 style="color: black;">Register Yourself..</h1>
+    <form method="POST" action="/registerData/">
+        {% csrf_token %}
+    <table border="2">
+        <tr>
+            <td><img src="{% static 'handicraftApp/images/user.png' %}" width="40" height="30"></td>
+            <td><input type="text" name="username" placeholder="Username" required></th>
+        </tr>
+        <tr>
+            <td><img src="{% static 'handicraftApp/images/ph.png' %}" width="40" height="30"></td>
+            <td><input type="number" name="phNum" placeholder="Phone Number" required></th>
+        </tr>
+        <tr>
+            <td><img src="{% static 'handicraftApp/images/email1.png' %}" width="40" height="30"></td>
+            <td><input type="text" name="email" placeholder="Email Id" required></th>
+        </tr>
+        <tr>
+            <td><img src="{% static 'handicraftApp/images/pswd.png' %}" width="40" height="30"></td>
+            <td><input type="password" name="password" placeholder="Password" required></th>
+        </tr>
+        <tr>
+            <td><img src="{% static 'handicraftApp/images/pswd.png' %}" width="40" height="30"></td>
+            <td><input type="password" name="confpswd" placeholder="Confirm Password" required></th>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="register" class="btn"></td>
+        </tr>
+    </table>
+    </form>  
+    <table>
+        <tr>
+            <td>Already Have an Account? <a href="/login/">Login</a></td>
+        </tr>
+    </table>
+    </div>
+    </div> 
+</body>
+</html>

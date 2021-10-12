@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        .producttd2{
+            border:2px dotted rgb(3, 3, 3);
+        }
+        h1{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 40px;
+            text-align: center;
+            color: brown;
+        }
+        input[type=text]{
+            width: 360px;
+            height: 25px;
+            border-radius: 2px;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+        }
+        .imagetd1{
+            padding-left: 50px;
+        }
+        .td2{
+            padding-left: 200px;
+        }
+        .td3{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 30px;
+        }
+        .ltd3{
+            padding-left: 70px;
+        }
+        .ltd4{
+            padding-right: 20px;
+        }
+       
+        .navbar {
+            padding: 5px;
+            overflow: hidden;
+            background-color: rgb(114, 116, 111);
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(153, 102, 102);
+        }
+
+        .wallhang{
+            border:2px dotted rgb(3, 3, 3); 
+            border-collapse: collapse; 
+            border-style:dotted solid; 
+            margin-top:30px; 
+            margin-bottom:20px; 
+            background-color: rgb(220, 220, 228);
+            margin-left: 5px;
+            width: 1340px;
+        }
+
+        .td1{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+            width: 300px;
+        }
+        h3{
+            margin-top: 2px;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 30px;
+            text-align: center;
+            color:rgb(10, 10, 10);
+        }
+        h5{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+            text-align: center;
+            margin-top: -15px;
+        }
+        .btn{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+            width: 180px;
+            height: 40px;
+            margin-top: -15px;
+            margin-left: 60px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            background-color: rgb(27, 189, 27);
+        }
+        .plink{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <table style="background-color: rgb(241, 224, 241); width: 1345px; ">
+        <tr>
+            <td class="imagetd1"><img src="{% static 'handicraftApp/images/logo.jpg' %}" width="150" height="150" ></td>
+            <td class="td2"><input type="text" placeholder="Search.." name="search"></td>
+            <td class="ltd3"><img src="{% static 'handicraftApp/images/wishlist.jpg' %}" width="30" height="30"></td>
+            <td class="ltd4"><a class="pLink" href="/cart/"><img src="{% static 'handicraftApp/images/bag.png' %}" width="30" height="30"></a></td>
+            <td class="td3"><a href="/login/">signout</td></a>
+        </tr>
+    </table>
+    </form>
+    <div class="navbar">
+        <a href="/home/">Home</a>
+        <a href="/hdecor/">HomeDecor</a>
+        <a href="/clothing">Clothing</a>
+        <a href="/footware">Footware</a>
+        <a href="/jewellery">Jewellery</a>
+        <a href="/photoframes/">Photoframes</a>
+        <a href="/handbag/">Handbags</a>
+        <a href="/painting">Painting</a>
+        <a href="/pot/">Pottery</a>
+    </div>
+    <table class="wallhang"> 
+        <h1>Handbags</h1>
+        <tr>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/handbags1.jpeg' %}" width="300" height="250"><h3>Shoulder Bag_1</h3><h5>₹559</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/handbags2.jpg' %}" width="300" height="250"><h3>Shoulder Bag_2</h3><h5>₹789</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/handbags3.jpg' %}" width="300" height="250"><h3>Shoulder Bag_3</h3><h5>₹999</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td ><img src="{% static 'handicraftApp/images/handbags4.jpeg' %}" width="300" height="250"><h3>Shoulder Bag_4</h3><h5>₹896</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="td1"><a href="/shoulderbags/">See More...</a></td>
+        </tr>
+    </table>
+
+    <table class="wallhang"> 
+        <h1>Clutches</h1>
+        <tr>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/clutche1.jpg' %}" width="300" height="250"><h3>Clutch_1</h3><h5>₹1159</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/clutche2.jpg' %}" width="300" height="250"><h3>Clutch_2</h3><h5>₹1279</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/clutche13.jpeg' %}" width="300" height="250"><h3>Clutch_3</h3><h5>₹1679</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td ><img src="{% static 'handicraftApp/images/clutche4.jpg' %}" width="300" height="250"><h3>Clutch_4</h3><h5>₹899</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="td1"><a href="/clutch/">See More...</a></td>
+        </tr>
+    </table>
+</body>
+</html>

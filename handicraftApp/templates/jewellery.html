@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        .producttd2{
+            border:2px dotted rgb(3, 3, 3);
+        }
+        h1{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 40px;
+            text-align: center;
+            color: brown;
+        }
+        input[type=text]{
+            width: 360px;
+            height: 25px;
+            border-radius: 2px;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+        }
+        .imagetd1{
+            padding-left: 50px;
+        }
+        .td2{
+            padding-left: 200px;
+        }
+        .td3{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 30px;
+        }
+        .ltd3{
+            padding-left: 70px;
+        }
+        .ltd4{
+            padding-right: 20px;
+        }
+       
+        .navbar {
+            padding: 5px;
+            overflow: hidden;
+            background-color: rgb(114, 116, 111);
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(153, 102, 102);
+        }
+
+        .wallhang{
+            border:2px dotted rgb(3, 3, 3); 
+            border-collapse: collapse; 
+            border-style:dotted solid; 
+            margin-top:20px; 
+            margin-bottom:20px; 
+            background-color: rgb(220, 220, 228);
+            margin-left: 5px;
+            width: 1340px;
+        }
+
+        .td1{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+            width: 300px;
+        }
+        h3{
+            margin-top: 2px;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 30px;
+            text-align: center;
+            color:rgb(10, 10, 10);
+        }
+        h5{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 25px;
+            text-align: center;
+            margin-top: -15px;
+        }
+        .btn{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 20px;
+            width: 180px;
+            height: 40px;
+            margin-top: -15px;
+            margin-left: 60px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            background-color: rgb(27, 189, 27);
+        }
+        .plink{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <table style="background-color: rgb(241, 224, 241); width: 1345px; ">
+        <tr>
+            <td class="imagetd1"><img src="{% static 'handicraftApp/images/logo.jpg' %}" width="150" height="150" ></td>
+            <td class="td2"><input type="text" placeholder="Search.." name="search"></td>
+            <td class="ltd3"><img src="{% static 'handicraftApp/images/wishlist.jpg' %}" width="30" height="30"></td>
+            <td class="ltd4"><a class="pLink" href="/cart/"><img src="{% static 'handicraftApp/images/bag.png' %}" width="30" height="30"></a></td>
+            <td class="td3"><a href="/login/">signout</td></a>
+        </tr>
+    </table>
+    </form>
+    <div class="navbar">
+        <a href="/home/">Home</a>
+        <a href="/hdecor/">HomeDecor</a>
+        <a href="/clothing">Clothing</a>
+        <a href="/footware">Footware</a>
+        <a href="/jewellery">Jewellery</a>
+        <a href="/photoframes/">Photoframes</a>
+        <a href="/handbag/">Handbags</a>
+        <a href="/painting">Painting</a>
+        <a href="/pot/">Pottery</a>
+    </div>
+    <table class="wallhang"> 
+        <h1>Earrings</h1>
+        <tr>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/E1.jpg' %}" width="300" height="250"><h3>Earring_1</h3><h5>₹198</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/E2.jpg' %}" width="300" height="250"><h3>Earring_2</h3><h5>₹184</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/E3.jpg' %}" width="300" height="250"><h3>Earring_3</h3><h5>₹129</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td ><img src="{% static 'handicraftApp/images/E4.jpg' %}" width="300" height="250"><h3>Earring_4</h3><h5>₹249</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="td1"><a href="/earrings/">See More...</a></td>
+        </tr>
+    </table>
+
+    <table class="wallhang"> 
+        <h1>Bangles</h1>
+        <tr>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/B9.jpg' %}" width="300" height="250"><h3>Maroon <br>Bangles</h3><h5>₹599</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/B6.jpg' %}" width="300" height="250"><h3>Pink <br>Bangles</h3><h5>₹699</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/B3.jpg' %}" width="300" height="250"><h3>Blue <br>Bangles</h3><h5>₹399</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td ><img src="{% static 'handicraftApp/images/B4.jpg' %}" width="300" height="250"><h3>Yellow-Pink <br>Bangles</h3><h5>₹899</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="td1"><a href="/bangles/">See More...</a></td>
+        </tr>
+    </table>
+ 
+    <table class="wallhang"> 
+        <h1>Necklace</h1>
+        <tr>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/N1.jpg' %}" width="300" height="250"><h3>Necklace_1</h3><h5>₹359</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/N2.jpg' %}" width="300" height="250"><h3>Necklace_4</h3><h5>₹199</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="producttd2"><img src="{% static 'handicraftApp/images/N5.jpg' %}" width="300" height="250"><h3>Necklace_5</h3><h5>₹499</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td ><img src="{% static 'handicraftApp/images/N14.jpg' %}" width="300" height="250"><h3>Necklace_10</h3><h5>₹289</h5><button class="btn"><a class="plink" href="/formdetail/">Buy</a></button></td>
+            <td class="td1"><a href="/necklace/">See More...</a></td>
+        </tr>
+    </table>
+
+</body>
+</html>

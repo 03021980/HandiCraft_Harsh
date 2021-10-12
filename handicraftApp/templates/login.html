@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 22px;
+           
+        }
+        td {
+            height: 50px;
+            padding: 5px;
+        }
+    
+        input{
+            background-color: wheat;
+            font-family: inherit;
+            font-style: italic;
+            font-size: 22px;
+            border-radius: 5px;
+            line-height: 40px;
+            text-align: center;
+            
+        }
+        .td2{
+            font-family: inherit;
+            font-style: italic;
+            font-size: 18px;
+            color: red;
+            padding-left: 180px;
+        }
+        .btn{
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: rgb(245, 152, 39);
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            color: cornsilk;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 110px;
+            left: 100px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'handicraftApp/images/umbrella.jpg' %}" width="1352" height="603" >
+        <div class="top-left">
+        <h1 style="color: rgb(8, 6, 6); padding-right: 30px;">Login...</h1>
+    <form method="POST" action="/LoginData/">
+        {% csrf_token %}
+    <table border="2" style=" border-collapse: collapse;">
+        <tr>
+            <td><img src="{% static 'handicraftApp/images/user.png' %}" width="40" height="30"></td>
+            <td><input type="text" name="uname" placeholder="UserName" required></td>
+        </tr>
+        <tr>
+            <td><img src="{% static 'handicraftApp/images/pswd.png' %}" width="40" height="30"></td>
+            <td><input type="password" name="psw" placeholder="Password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="login" class="btn">
+        </tr>
+    </table>
+    </form>   
+</div>
+</div>
+</body>
+</html>
